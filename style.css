@@ -1,5 +1,220 @@
-/* Scale model car collection background for hobbies page */
-.car-collection-bg {
+/* Real Madrid themed background for profile page */
+.realmadrid-bg {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  background: linear-gradient(120deg, #181c2b 60%, #1a237e 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.realmadrid-logo-bg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 60vw;
+  max-width: 700px;
+  min-width: 320px;
+  opacity: 0.08;
+  filter: drop-shadow(0 0 32px #fff8) blur(0.5px);
+  pointer-events: none;
+  user-select: none;
+}
+/* Coffee-themed background for store page */
+.coffee-bg {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  background: linear-gradient(120deg, #6f4e37 0%, #b58868 100%);
+}
+.coffee-cup {
+  position: absolute;
+  border-radius: 50% 50% 60% 60%/60% 60% 80% 80%;
+  opacity: 0.18;
+  filter: blur(1.5px) brightness(1.1) drop-shadow(0 8px 32px #0008);
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at 60% 40%, #fff 0%, #c0a080 60%, #6f4e37 100%);
+  animation: cup-move 18s ease-in-out infinite alternate;
+}
+.cup1 {
+  width: 180px; height: 90px;
+  top: 12vh; left: 15vw;
+  animation-delay: 0s;
+}
+.cup2 {
+  width: 140px; height: 70px;
+  top: 60vh; left: 70vw;
+  animation-delay: 6s;
+}
+.coffee-bean {
+  position: absolute;
+  border-radius: 50% 50% 50% 50%/60% 40% 60% 40%;
+  background: #4e2e1e;
+  opacity: 0.22;
+  filter: blur(0.5px) brightness(1.2);
+  z-index: 0;
+  pointer-events: none;
+  box-shadow: 0 2px 8px #0006;
+  animation: bean-move 12s ease-in-out infinite alternate;
+}
+.bean1 {
+  width: 40px; height: 22px;
+  top: 30vh; left: 25vw;
+  animation-delay: 2s;
+}
+.bean2 {
+  width: 32px; height: 18px;
+  top: 80vh; left: 60vw;
+  animation-delay: 4s;
+}
+.bean3 {
+  width: 28px; height: 16px;
+  top: 50vh; left: 80vw;
+  animation-delay: 7s;
+}
+.bean4 {
+  width: 36px; height: 20px;
+  top: 75vh; left: 18vw;
+  animation-delay: 9s;
+}
+@keyframes cup-move {
+  0% { transform: translateY(0) scaleX(1); }
+  100% { transform: translateY(-12px) scaleX(1.04); }
+}
+@keyframes bean-move {
+  0% { transform: translateY(0) scale(1); }
+  100% { transform: translateY(-8px) scale(1.08); }
+}
+
+/* Supercars background for hobbies page */
+.supercars-bg {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  background: linear-gradient(120deg, #232526 0%, #414345 100%);
+}
+.supercar {
+  position: absolute;
+  border-radius: 40% 40% 60% 60%/50% 50% 60% 60%;
+  opacity: 0.22;
+  filter: blur(2px) brightness(1.1) drop-shadow(0 8px 32px #0008);
+  z-index: 0;
+  pointer-events: none;
+  animation: supercar-move 16s ease-in-out infinite alternate;
+}
+.supercar1 {
+  width: 260px; height: 70px;
+  background: linear-gradient(90deg, #ff512f 0%, #dd2476 100%);
+  top: 10vh; left: 12vw;
+  animation-delay: 0s;
+}
+.supercar2 {
+  width: 210px; height: 60px;
+  background: linear-gradient(90deg, #24c6dc 0%, #5433ff 100%);
+  top: 35vh; left: 65vw;
+  animation-delay: 3s;
+}
+.supercar3 {
+  width: 230px; height: 65px;
+  background: linear-gradient(90deg, #f7971e 0%, #ffd200 100%);
+  top: 75vh; left: 28vw;
+  animation-delay: 6s;
+}
+.supercar4 {
+  width: 180px; height: 55px;
+  background: linear-gradient(90deg, #00c3ff 0%, #ffff1c 100%);
+  top: 22vh; left: 78vw;
+  animation-delay: 9s;
+}
+.supercar5 {
+  width: 150px; height: 45px;
+  background: linear-gradient(90deg, #fc00ff 0%, #00dbde 100%);
+  top: 62vh; left: 18vw;
+  animation-delay: 12s;
+}
+@keyframes supercar-move {
+  0% { transform: translateY(0) scaleX(1); }
+  100% { transform: translateY(-18px) scaleX(1.06); }
+}
+
+/* Milky Way galaxy background for blog page */
+.galaxy-bg {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  background: radial-gradient(ellipse at 60% 60%, #fff 0%, #a18cd1 10%, #181c2b 100%);
+}
+.star {
+  position: absolute;
+  border-radius: 50%;
+  background: white;
+  opacity: 0.8;
+  box-shadow: 0 0 8px 2px #fff, 0 0 24px 8px #fff2;
+  animation: twinkle 3s infinite alternate;
+}
+.star1 { width: 2px; height: 2px; top: 10%; left: 20%; animation-delay: 0s; }
+.star2 { width: 3px; height: 3px; top: 30%; left: 70%; animation-delay: 0.5s; }
+.star3 { width: 1.5px; height: 1.5px; top: 60%; left: 40%; animation-delay: 1s; }
+.star4 { width: 2.5px; height: 2.5px; top: 80%; left: 80%; animation-delay: 1.5s; }
+.star5 { width: 2px; height: 2px; top: 50%; left: 10%; animation-delay: 2s; }
+.star6 { width: 1.2px; height: 1.2px; top: 20%; left: 60%; animation-delay: 2.5s; }
+.star7 { width: 2.2px; height: 2.2px; top: 70%; left: 30%; animation-delay: 1.2s; }
+.star8 { width: 1.8px; height: 1.8px; top: 40%; left: 80%; animation-delay: 2.2s; }
+.star9 { width: 2.8px; height: 2.8px; top: 85%; left: 15%; animation-delay: 0.8s; }
+.star10 { width: 1.6px; height: 1.6px; top: 15%; left: 75%; animation-delay: 1.8s; }
+@keyframes twinkle {
+  0% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+.nebula {
+  position: absolute;
+  width: 600px;
+  height: 400px;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%) rotate(-15deg);
+  background: radial-gradient(ellipse at center, #a18cd1 0%, #43e97b 40%, #181c2b 100%);
+  opacity: 0.22;
+  filter: blur(60px) saturate(180%);
+  z-index: 0;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #181c2b;
+  color: #e0e6f0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* City lights blurred circles for home/profile/store pages */
+.city-lights-bg {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
   width: 100vw;
@@ -8,65 +223,58 @@
   pointer-events: none;
   overflow: hidden;
 }
-.car-shadow {
+.city-light {
   position: absolute;
-  border-radius: 30% 30% 60% 60%/40% 40% 60% 60%;
+  border-radius: 50%;
   opacity: 0.18;
-  filter: blur(8px) brightness(0.9);
+  filter: blur(32px);
   z-index: 0;
   pointer-events: none;
-  box-shadow: 0 8px 32px 8px #0008;
-  animation: car-move 18s ease-in-out infinite alternate;
+  animation: city-float 16s ease-in-out infinite alternate;
 }
-.car1 {
-  width: 220px; height: 60px;
-  background: #e63946;
-  top: 12vh; left: 10vw;
+.city-light1 {
+  width: 320px;
+  height: 320px;
+  background: #ffb347;
+  top: 40px;
+  left: -80px;
   animation-delay: 0s;
 }
-.car2 {
-  width: 180px; height: 50px;
-  background: #457b9d;
-  top: 40vh; left: 60vw;
+.city-light2 {
+  width: 220px;
+  height: 220px;
+  background: #00eaff;
+  top: 60vh;
+  left: 60vw;
   animation-delay: 3s;
 }
-.car3 {
-  width: 200px; height: 55px;
-  background: #f1faee;
-  top: 70vh; left: 30vw;
+.city-light3 {
+  width: 180px;
+  height: 180px;
+  background: #ff5e62;
+  bottom: 0;
+  right: 10vw;
   animation-delay: 6s;
 }
-.car4 {
-  width: 160px; height: 45px;
-  background: #a8dadc;
-  top: 25vh; left: 75vw;
+.city-light4 {
+  width: 140px;
+  height: 140px;
+  background: #a18cd1;
+  top: 70vh;
+  left: 10vw;
   animation-delay: 9s;
 }
-.car5 {
-  width: 140px; height: 40px;
-  background: #ffbe0b;
-  top: 60vh; left: 15vw;
+.city-light5 {
+  width: 200px;
+  height: 200px;
+  background: #43e97b;
+  top: 10vh;
+  right: -60px;
   animation-delay: 12s;
 }
-@keyframes car-move {
-  0% { transform: translateY(0) scaleX(1); }
-  100% { transform: translateY(-20px) scaleX(1.04); }
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
-
-body {
-  font-family: 'Inter', Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  /* City lights theme: dark base with glowing blurred circles */
-  background: #181c2b;
-  color: #e0e6f0;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  overflow-x: hidden;
+@keyframes city-float {
+  0% { transform: translateY(0) scale(1); }
+  100% { transform: translateY(-30px) scale(1.08); }
 }
 
 

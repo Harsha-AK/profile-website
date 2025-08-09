@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile - Harsha's Profile Website</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="coffee-plantation-bg"></div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="games.html" class="active">Games</a></li>
+      <li><a href="hobbies.html">Hobbies</a></li>
+      <li><a href="store.html">Store</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h1>Games</h1>
+    <label for="game-select" style="font-weight:600; margin-right:0.5rem;">Choose a game:</label>
+    <select id="game-select" style="margin-bottom:1.5rem;">
+  <option value="pong">Pong</option>
+  <option value="tetris">Tetris</option>
+    </select>
+    <style>
+      .game-canvas {
+        width: 90vw;
+        max-width: 400px;
+        aspect-ratio: 1/1;
+        background: #222;
+        display: block;
+        margin: 1.5rem auto 0 auto;
+        border-radius: 12px;
+        touch-action: none;
+      }
+      #tetris-canvas {
+        aspect-ratio: 1/2;
+        max-width: 320px;
+      }
+      .game-controls {
+        display: flex;
+        justify-content: center;
+        gap: 1.2rem;
+        margin: 1rem 0 0.5rem 0;
+      }
+      .game-btn {
+        font-size: 1.5rem;
+        padding: 0.7rem 1.2rem;
+        border-radius: 8px;
+        border: none;
+        background: #333;
+        color: #fff;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+        user-select: none;
+      }
+      @media (max-width: 600px) {
+        .game-canvas { max-width: 98vw; }
+        #tetris-canvas { max-width: 96vw; }
+      }
+    </style>
+    <div id="pong-container">
+      <div class="game-menu" id="pong-menu" style="display:flex;justify-content:center;gap:0.7rem;margin-bottom:0.7rem;">
+        <button class="game-btn" id="pong-start">Start</button>
+        <button class="game-btn" id="pong-pause">Pause</button>
+        <button class="game-btn" id="pong-restart">Restart</button>
+        <button class="game-btn" id="pong-stop">Stop</button>
+      </div>
+      <canvas id="pong-canvas" width="320" height="320" class="game-canvas"></canvas>
+      <div class="game-controls" id="pong-controls">
+        <button class="game-btn" id="pong-up">&#8593; Up</button>
+        <button class="game-btn" id="pong-down">&#8595; Down</button>
+      </div>
+    </div>
+    <div id="tetris-container" style="display:none;">
+      <div class="game-menu" id="tetris-menu" style="display:flex;justify-content:center;gap:0.7rem;margin-bottom:0.7rem;">
+        <button class="game-btn" id="tetris-start">Start</button>
+        <button class="game-btn" id="tetris-pause">Pause</button>
+        <button class="game-btn" id="tetris-restart">Restart</button>
+        <button class="game-btn" id="tetris-stop">Stop</button>
+      </div>
+      <canvas id="tetris-canvas" width="200" height="400" class="game-canvas"></canvas>
+      <div class="game-controls" id="tetris-controls">
+        <button class="game-btn" id="tetris-left">&#8592;</button>
+        <button class="game-btn" id="tetris-rotate">&#8635;</button>
+        <button class="game-btn" id="tetris-right">&#8594;</button>
+        <button class="game-btn" id="tetris-down">&#8595;</button>
+      </div>
+    </div>
+    <script>
+      // Game switcher logic
+      const gameSelect = document.getElementById('game-select');
+      const pongContainer = document.getElementById('pong-container');
+      const tetrisContainer = document.getElementById('tetris-container');
+      gameSelect.addEventListener('change', function() {
+        if (this.value === 'pong') {
+          pongContainer.style.display = '';
+          tetrisContainer.style.display = 'none';
+        } else {
+          pongContainer.style.display = 'none';
+          tetrisContainer.style.display = '';
+        }
+      });
+      // Responsive canvas for mobile
+      function resizeCanvas(canvas, aspect) {
+        const vw = Math.min(window.innerWidth, 400);
+        canvas.style.width = (vw * 0.96) + 'px';
+        canvas.style.height = (vw * 0.96 * aspect) + 'px';
+      }
+      function setResponsiveCanvases() {
+        resizeCanvas(document.getElementById('pong-canvas'), 1);
+        resizeCanvas(document.getElementById('tetris-canvas'), 2);
+      }
+      window.addEventListener('resize', setResponsiveCanvases);
+      setResponsiveCanvases();
+      // External game logic
+      // (Pong and Tetris logic loaded below)
+    </script>
+  </main>
+  <footer>
+    &copy; 2025 Harsha-AK. All rights reserved.
+  </footer>
+  <script src="games/pong.js"></script>
+  <script src="games/tetris.js"></script>
+</body>
+</html>
